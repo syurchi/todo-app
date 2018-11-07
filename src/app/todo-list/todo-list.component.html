@@ -1,6 +1,11 @@
-<table>
-  <tr *ngFor="let todo of todoList">
-    <td>{{ todo.desc }}</td>
-    <td>{{ todo.status }}</td>
-  </tr>
-</table>
+<div class="list-container">
+  <div class="list">
+    <div class="todo-item" *ngFor="let todo of todoList">
+
+      <span class="todo-desc">{{ todo.desc }}</span>
+      <img class="todo-status" [hidden]="todo.status" src="../../assets/tick-sign.png">
+      <img class="todo-status" [hidden]="!todo.status" src="../../assets/square.png">
+
+    </div>
+  </div>
+</div>
